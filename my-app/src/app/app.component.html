@@ -1,1 +1,10 @@
-<h1>Hello World!</h1>>
+<h1>Hello World!</h1>
+
+<br>
+<div>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" [(ngModel)]="dob" (change)="calculateAge()" />
+  </div>
+  <div *ngIf="age">
+    <p>Your age is {{ age }} years.</p>
+  </div>
