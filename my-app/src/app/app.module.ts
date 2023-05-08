@@ -4,18 +4,27 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { AgeService } from './age.service';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-  //  BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    BrowserModule
+    BrowserModule,
+    // HttpClientModule
   ],
-  providers: [],
+  // exports: [
+  // //  CommonModule,
+  //   FormsModule,
+  //   HttpClientModule,
+  //  // RouterModule
+  // ],
+  providers: [AgeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
